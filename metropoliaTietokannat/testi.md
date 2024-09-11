@@ -164,3 +164,20 @@ select count(*) from goal inner join goal_reached on goal.id = goal_reached.goal
 select name from airport order by latitude_deg limit 1;
 ![alt text](image-41.png)
 
+Päivityskyselyt harjoitukset
+
+1
+update game set location = (select ident from airport where name = 'Nottingham Airport'), co2_consumed = co2_consumed + 500 where screen_name = 'Vesa';
+![alt text](image-42.png)
+
+2
+goal_reached
+
+3
+delete from goal_reached;
+![alt text](image-43.png)
+
+4
+delete from game;
+![alt text](image-44.png)
+
