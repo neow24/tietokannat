@@ -122,3 +122,45 @@ select country.name from country where country.iso_country not in (select airpor
 select goal.name from goal where goal.id not in (select goal_reached.goal_id from goal_reached inner join game on goal_reached.game_id = game.id where game.screen_name = 'Heini');
 ![alt text](image-31.png)
 
+Koostetieto kyselyt harjoitukset
+
+1
+select max(elevation_ft) from airport;
+![alt text](image-32.png)
+
+2
+select continent, count(*) from country group by continent;
+![alt text](image-33.png)
+
+3
+select screen_name, count(*) from goal_reached inner join game on goal_reached.game_id = game.id group by screen_name;
+![alt text](image-34.png)
+
+4
+select screen_name from game order by co2_consumed limit 1;
+![alt text](image-35.png)
+
+5
+select country.name, count(*) from country inner join airport on country.iso_country = airport.iso_country group by country.name order by count(*) desc limit 50;
+![alt text](image-36.png)
+
+6
+select country.name from country inner join airport on country.iso_country = airport.iso_country group by country.iso_country having count(*) >= 1000;
+![alt text](image-37.png)
+
+7
+select name from airport where elevation_ft in (select max(elevation_ft) from airport);
+![alt text](image-38.png)
+
+8
+select country.name from country inner join airport on country.iso_country = airport.iso_country where elevation_ft in (select max(elevation_ft) from airport);
+![alt text](image-39.png)
+
+9
+select count(*) from goal inner join goal_reached on goal.id = goal_reached.goal_id inner join game on goal_reached.game_id = game.id where screen_name = 'Vesa';
+![alt text](image-40.png)
+
+10
+select name from airport order by latitude_deg limit 1;
+![alt text](image-41.png)
+
