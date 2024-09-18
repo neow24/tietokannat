@@ -181,3 +181,34 @@ delete from goal_reached;
 delete from game;
 ![alt text](image-44.png)
 
+Tietokannan suunnittelu harjoitukset
+
+1
+ident
+
+2
+airport
+
+3
+a
+
+4
+Tosi
+
+5
+Epätosi
+
+6
+a
+
+7
+c
+
+8
+Tosi
+
+9
+a
+
+10
+b
